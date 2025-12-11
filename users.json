@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Aarnav Thapa",
+        "email": "aarnav@example.com",
+        "password": "$2y$10$randomhashhere"
+    },
+    {
+        "name": "John Doe",
+        "email": "john@example.com",
+        "password": "$2y$10$anotherhashhere"
+    },
+    {
+        "name": "SAM vai",
+        "email": "SAM123@GMAIL.COM",
+        "password": "$2y$10$Or7MBKInVCywMhPpjLFjROsH\/WhHAu\/KHpI32TXrGcaO92cl3tXaK"
+    },
+    {
+        "name": "SAM vai",
+        "email": "SAM123@GMAIL.COM",
+        "password": "$2y$10$QHKWBq7J8G.PZfY6vxoVWOBEXihAg3Hh8UMRjrgX.vqSfcXqPMEL2"
+    },
+    {
+        "name": "terobau",
+        "email": "terobau123@gmail.com",
+        "password": "$2y$10$UxRTZeQXroDrVquIgEU2J.7qkDa5yogCJIADKcI.XBGEKjXbxLPm2"
+    }
+]

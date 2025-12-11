@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Create Your Account</h2>
+
+    <form id="registerForm" action="register.php" method="POST">
+
+        <!-- Full Name -->
+        <label>Full Name</label>
+        <input type="text" name="fullname" id="fullname" placeholder="Enter your full name">
+        <p class="error" id="fullnameError"></p>
+
+        <!-- Email -->
+        <label>Email Address</label>
+        <input type="email" name="email" id="email" placeholder="example@gmail.com">
+        <p class="error" id="emailError"></p>
+
+        <!-- Password -->
+        <label>Password</label>
+        <input type="password" name="password" id="password" placeholder="At least 8 characters">
+        <p class="error" id="passwordError"></p>
+
+        <!-- Confirm Password -->
+        <label>Confirm Password</label>
+        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Re-enter password">
+        <p class="error" id="confirmPasswordError"></p>
+
+        <button type="submit">Register</button>
+    </form>
+
+</div>
+
+<script>
+document.getElementById("registerForm").addEventListener("submit", function(e) {
+
+    let valid = true;
+
+    let fullname = document.getElementById("fullname").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
+
+    // Reset errors
+    document.querySelectorAll(".error").forEach(e => e.innerHTML = "");
+
+    if (fullname === "") {
+        document.getElementById("fullnameError").innerHTML = "Full name cannot be empty.";
+        valid = false;
+    }
+
+    if (email === "") {
+        document.getElementById("emailError").innerHTML = "Email cannot be empty.";
+        valid = false;
+    } else if (!email.includes("@") || !email.includes(".")) {
+        document.getElementById("emailError").innerHTML = "Invalid email format.";
+        valid = false;
+    }
+
+    if (password.length < 8) {
+        document.getElementById("passwordError").innerHTML = "Password must be at least 8 characters.";
+        valid = false;
+    }
+
+    if (confirmPassword !== password || confirmPassword === "") {
+        document.getElementById("confirmPasswordError").innerHTML = "Passwords do not match.";
+        valid = false;
+    }
+
+    if (!valid) e.preventDefault();
+});
+</script>
+
+</body>
+</html>
