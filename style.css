@@ -66,7 +66,7 @@ button {
 button:hover {
     background-color: seagreen; 
 }
-.error {
+error {
     color: red; 
     font-size: 14px; 
     margin-top: -10px;
