@@ -66,3 +66,11 @@ button {
 button:hover {
     background-color: seagreen; 
 }
+.error {
+    color: red; 
+    font-size: 14px; 
+    margin-top: -10px;
+    margin-bottom: 10px; 
+    font-weight: normal; 
+
+}
